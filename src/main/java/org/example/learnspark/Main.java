@@ -6,7 +6,6 @@ import org.example.learnspark.controller.IdentificationController;
 import org.example.learnspark.controller.PaymentController;
 import org.example.learnspark.controller.PaymentMethodController;
 import org.example.learnspark.controller.PreferenceController;
-import org.example.learnspark.db.DatabaseHelper;
 import org.example.learnspark.exception.AbstractGeneralException;
 import org.example.learnspark.util.JsonTransformer;
 import org.example.learnspark.util.MPSdk;

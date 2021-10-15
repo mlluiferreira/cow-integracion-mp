@@ -1,9 +1,7 @@
 package org.example.learnspark.util;
 
 public class Path {
-    public Path() {
-
-    }
+    private Path() { }
 
     public static class Web {
 
@@ -28,15 +26,6 @@ public class Path {
         public static final String CREATE_PREFERENCE = "preference";
         public static final String GET_PREFERENCE_BY_ID = "preference/:id";
         public static final String PAY_PREFERENCE_BY_ID = "preference/:id/pay";
-    }
-
-    public static class Database {
-
-        private Database() { }
-
-        public static final String LOCAL_DBNAME = "todo_db";
-        public static final String HOST = "127.0.0.1";
-        public static final int PORT = 27017;
     }
 
     public static class MercadoPago {
