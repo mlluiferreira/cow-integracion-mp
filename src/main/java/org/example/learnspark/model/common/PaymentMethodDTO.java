@@ -1,4 +1,4 @@
-package org.example.learnspark.model;
+package org.example.learnspark.model.common;
 
 import com.mercadopago.resources.datastructures.paymentmethod.FinancialInstitutions;
 

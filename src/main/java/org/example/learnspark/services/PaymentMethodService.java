@@ -2,7 +2,7 @@ package org.example.learnspark.services;
 
 import com.mercadopago.exceptions.MPException;
 import com.mercadopago.resources.PaymentMethod;
-import org.example.learnspark.model.PaymentMethodDTO;
+import org.example.learnspark.model.common.PaymentMethodDTO;
 import org.example.learnspark.model.mapper.PaymentMethodMapper;
 
 import java.util.ArrayList;

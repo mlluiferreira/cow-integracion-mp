@@ -4,9 +4,9 @@ import com.mercadopago.resources.Payment;
 import com.mercadopago.resources.datastructures.payment.Address;
 import com.mercadopago.resources.datastructures.payment.Identification;
 import com.mercadopago.resources.datastructures.payment.Payer;
-import org.example.learnspark.model.AddressDTO;
-import org.example.learnspark.model.CreatePaymentDTO;
-import org.example.learnspark.model.PayerDTO;
+import org.example.learnspark.model.common.AddressDTO;
+import org.example.learnspark.model.payment.CreatePaymentDTO;
+import org.example.learnspark.model.common.PayerDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

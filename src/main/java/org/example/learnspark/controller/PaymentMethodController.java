@@ -1,6 +1,6 @@
 package org.example.learnspark.controller;
 
-import org.example.learnspark.model.PaymentMethodDTO;
+import org.example.learnspark.model.common.PaymentMethodDTO;
 import org.example.learnspark.services.PaymentMethodService;
 import spark.Request;
 import spark.Response;

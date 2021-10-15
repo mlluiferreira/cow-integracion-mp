@@ -1,7 +1,7 @@
 package org.example.learnspark.controller;
 
 import com.mercadopago.resources.Payment;
-import org.example.learnspark.model.CreatePaymentDTO;
+import org.example.learnspark.model.payment.CreatePaymentDTO;
 import org.example.learnspark.services.PaymentService;
 import org.example.learnspark.util.Parser;
 import spark.Request;

@@ -5,7 +5,7 @@ import com.mercadopago.resources.Payment;
 import org.apache.commons.lang3.StringUtils;
 import org.example.learnspark.exception.DataNotFoundException;
 import org.example.learnspark.exception.ErrorCreatePaymentException;
-import org.example.learnspark.model.CreatePaymentDTO;
+import org.example.learnspark.model.payment.CreatePaymentDTO;
 import org.example.learnspark.model.mapper.PaymentMapper;
 
 public class PaymentService {

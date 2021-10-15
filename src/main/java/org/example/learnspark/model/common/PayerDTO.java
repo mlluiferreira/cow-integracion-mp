@@ -1,4 +1,4 @@
-package org.example.learnspark.model;
+package org.example.learnspark.model.common;
 
 public class PayerDTO {
     private String email = "";

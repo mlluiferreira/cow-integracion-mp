@@ -1,4 +1,6 @@
-package org.example.learnspark.model;
+package org.example.learnspark.model.payment;
+
+import org.example.learnspark.model.common.PayerDTO;
 
 import java.math.BigDecimal;
 
