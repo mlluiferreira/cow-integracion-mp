@@ -5,6 +5,7 @@ import org.example.learnspark.controller.ExceptionController;
 import org.example.learnspark.controller.IdentificationController;
 import org.example.learnspark.controller.PaymentController;
 import org.example.learnspark.controller.PaymentMethodController;
+import org.example.learnspark.controller.PreferenceController;
 import org.example.learnspark.db.DatabaseHelper;
 import org.example.learnspark.exception.AbstractGeneralException;
 import org.example.learnspark.util.JsonTransformer;
@@ -38,6 +39,11 @@ public class Main {
         post(Path.Web.CREATE_PAYMENT, PaymentController::createPayment, new JsonTransformer());
         get(Path.Web.GET_PAYMENT_BY_ID, PaymentController::getPaymentById, new JsonTransformer());
         get(Path.Web.PAY_PAYMENT_BY_ID, PaymentController::payPaymentById);
+
+        // handle route for preference CRUD
+        post(Path.Web.CREATE_PREFERENCE, PreferenceController::createPreference, new JsonTransformer());
+        get(Path.Web.GET_PREFERENCE_BY_ID, PreferenceController::getPreferenceById, new JsonTransformer());
+        get(Path.Web.PAY_PREFERENCE_BY_ID, PreferenceController::payPreferenceById);
     }
 
     public static void setupAfterFilters() {

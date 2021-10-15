@@ -23,6 +23,11 @@ public class Path {
         public static final String CREATE_PAYMENT = "/payment";
         public static final String GET_PAYMENT_BY_ID = "/payment/:id";
         public static final String PAY_PAYMENT_BY_ID = "/payment/:id/pay";
+
+        // routes for preference CRUD
+        public static final String CREATE_PREFERENCE = "preference";
+        public static final String GET_PREFERENCE_BY_ID = "preference/:id";
+        public static final String PAY_PREFERENCE_BY_ID = "preference/:id/pay";
     }
 
     public static class Database {
