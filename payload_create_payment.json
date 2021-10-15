@@ -1,0 +1,19 @@
+{
+  "amount": 10.0,
+  "description": "",
+  "paymentMethodId": "bolbradesco",
+  "payer": {
+    "email": "valid_email@here.com",
+    "firstName": "teste",
+    "lastName": "teste",
+    "CPF": "83250453021",
+    "address": {
+      "zipCode": "58056475",
+      "streetName": "rua mria",
+      "streetNumber": 1,
+      "neighborhood": "jp",
+      "city": "jp",
+      "state": "SP"
+    }
+  }
+}
