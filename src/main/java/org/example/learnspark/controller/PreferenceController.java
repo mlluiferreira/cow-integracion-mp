@@ -16,13 +16,15 @@ public class PreferenceController {
         return PreferenceService.createPreference(createPreferenceDTO);
     }
 
-    public static Object getPreferenceById(Request request, Response response) {
+    public static Preference getPreferenceById(Request request, Response response) {
         String id = request.params("id");
-        return null;
+        return PreferenceService.getPreferenceById(id);
     }
 
     public static Object payPreferenceById(Request request, Response response) {
         String id = request.params("id");
+        Preference preference = PreferenceService.getPreferenceById(id);
+        response.redirect(preference.getInitPoint());
         return null;
     }
 }
