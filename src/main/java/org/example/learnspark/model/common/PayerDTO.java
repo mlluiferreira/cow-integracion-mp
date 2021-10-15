@@ -7,7 +7,7 @@ public class PayerDTO {
 
     private String lastName = "";
 
-    private String CPF = "";
+    private String cpf = "";
 
     private AddressDTO address = new AddressDTO();
 
@@ -38,12 +38,10 @@ public class PayerDTO {
         this.lastName = lastName;
     }
 
-    public String getCPF() {
-        return CPF;
-    }
+    public String getCPF() { return cpf; }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setCPF(String cpf) {
+        this.cpf = cpf;
     }
 
     public AddressDTO getAddress() {
