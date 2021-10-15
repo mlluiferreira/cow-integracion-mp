@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo_database
+    restart: always
+    ports:
+        - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root_pwd
+      MONGO_NON_ROOT_USERNAME: luiz
+      MONGO_NON_ROOT_PASSWORD: luiz
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    depends_on:
+        - mongo
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: root_pwd
+      ME_CONFIG_MONGODB_SERVER: mongo_database
