@@ -37,6 +37,7 @@ public class Main {
         // handle route for payment CRUD
         post(Path.Web.CREATE_PAYMENT, PaymentController::createPayment, new JsonTransformer());
         get(Path.Web.GET_PAYMENT_BY_ID, PaymentController::getPaymentById, new JsonTransformer());
+        get(Path.Web.PAY_PAYMENT_BY_ID, PaymentController::payPaymentById);
     }
 
     public static void setupAfterFilters() {

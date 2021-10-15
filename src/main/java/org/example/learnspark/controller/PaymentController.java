@@ -20,4 +20,17 @@ public class PaymentController {
         String id = request.params("id");
         return PaymentService.getPaymentById(id);
     }
+
+    public static Object payPaymentById(Request request, Response response) {
+        String id = request.params("id");
+        Payment payment = PaymentService.getPaymentById(id);
+
+        if(payment.getPaymentMethodId().equalsIgnoreCase("ticket")) {
+            response.redirect(payment.getTransactionDetails().getExternalResourceUrl());
+        } else if(payment.getPaymentMethodId().equalsIgnoreCase("pix")) {
+            return payment.getPointOfInteraction().getTransactionData().getQrCodeBase64();
+        }
+
+        return null;
+    }
 }
