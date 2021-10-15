@@ -21,7 +21,7 @@ public class Path {
 
         // routes for payment CRUD
         public static final String CREATE_PAYMENT = "/payment";
-
+        public static final String GET_PAYMENT_BY_ID = "/payment/:id";
     }
 
     public static class Database {

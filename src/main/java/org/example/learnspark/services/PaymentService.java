@@ -2,6 +2,8 @@ package org.example.learnspark.services;
 
 import com.mercadopago.exceptions.MPException;
 import com.mercadopago.resources.Payment;
+import org.apache.commons.lang3.StringUtils;
+import org.example.learnspark.exception.DataNotFoundException;
 import org.example.learnspark.exception.ErrorCreatePaymentException;
 import org.example.learnspark.model.CreatePaymentDTO;
 import org.example.learnspark.model.mapper.PaymentMapper;
@@ -21,5 +23,20 @@ public class PaymentService {
             e.printStackTrace();
         }
         return createdPayment;
+    }
+
+    public static Payment getPaymentById(String id) {
+        Payment payment = null;
+
+        if(StringUtils.isBlank(id)) throw new DataNotFoundException("payment not found", id);
+
+        try {
+            payment = Payment.findById(id);
+        } catch (MPException e) {
+            e.printStackTrace();
+        }
+        if(payment == null || payment.getId() == null)
+            throw new DataNotFoundException(payment.getLastApiResponse().getStringResponse(), id);
+        return payment;
     }
 }
