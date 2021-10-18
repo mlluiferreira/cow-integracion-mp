@@ -33,4 +33,8 @@ public class PaymentMethodService {
         return paymentMethodDTOCache.stream()
                 .filter(paymentMethod -> paymentMethod.getPaymentTypeId().equals(type)).collect(Collectors.toList());
     }
+
+    public static void clearCache() {
+        paymentMethodDTOCache = new ArrayList<>();
+    }
 }

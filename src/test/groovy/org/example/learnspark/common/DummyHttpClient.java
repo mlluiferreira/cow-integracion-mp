@@ -34,6 +34,12 @@ public class DummyHttpClient implements HttpClient {
                 .thenReturn(httpResponse);
     }
 
+    public void mock(Class<Exception> ex) throws IOException {
+        httpClient = Mockito.mock(HttpClient.class);
+        Mockito.when(httpClient.execute(Mockito.any(HttpRequestBase.class), Mockito.any(HttpContext.class)))
+                .thenThrow(ex);
+    }
+
     private HttpResponse createResponse(int statusCode, String path) throws IOException {
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource(path).getFile());
