@@ -1,7 +1,6 @@
 package org.example.learnspark.common;
 
 
-import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
@@ -20,7 +19,6 @@ import org.apache.http.protocol.HttpContext;
 import org.mockito.Mockito;
 
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
 
 public class DummyHttpClient implements HttpClient {
@@ -41,9 +39,7 @@ public class DummyHttpClient implements HttpClient {
     }
 
     private HttpResponse createResponse(int statusCode, String path) throws IOException {
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource(path).getFile());
-        byte[] response = FileUtils.readFileToByteArray(file);
+        byte[] response = FileUtils.loadFileAsByteArray(path);
         HttpResponse httpResponse = new BasicHttpResponse(new BasicStatusLine(HttpVersion.HTTP_1_0, statusCode, ""));
         BasicHttpEntity entity = new BasicHttpEntity();
         entity.setContent(new ByteArrayInputStream(response));
