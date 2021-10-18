@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "id": "",
+      "title": "dummy",
+      "description": "dummy",
+      "picture_url": "",
+      "category_id": "",
+      "quantity": 1,
+      "currency_id": "BRL",
+      "unit_price": 10.0
+    }
+  ],
+  "payer": {
+    "name": "",
+    "surname": "",
+    "email": "",
+    "phone": {
+      "area_code": "",
+      "number": ""
+    },
+    "identification": {
+      "type": "",
+      "number": ""
+    },
+    "address": {
+      "zip_code": "",
+      "street_name": ""
+    }
+  },
+  "payment_methods": {
+    "excluded_payment_methods": [
+      {
+        "id": ""
+      }
+    ],
+    "excluded_payment_types": [
+      {
+        "id": ""
+      }
+    ]
+  },
+  "shipments": {
+    "receiver_address": {
+      "floor": "",
+      "apartment": "",
+      "zip_code": "",
+      "street_name": ""
+    }
+  },
+  "back_urls": {
+    "success": "",
+    "pending": "",
+    "failure": ""
+  },
+  "id": "805378889-8e8ae1ca-52e3-49b7-a138-394a8c0c3730",
+  "init_point": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=805378889-8e8ae1ca-52e3-49b7-a138-394a8c0c3730",
+  "sandbox_init_point": "https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=805378889-8e8ae1ca-52e3-49b7-a138-394a8c0c3730",
+  "operation_type": "regular_payment",
+  "metadata": {},
+  "additional_info": "",
+  "external_reference": "",
+  "expires": false,
+  "collector_id": 1,
+  "client_id": 1,
+  "marketplace": "NONE",
+  "marketplace_fee": 0.0,
+  "binary_mode": false
+}

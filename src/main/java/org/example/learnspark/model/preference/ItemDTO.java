@@ -20,6 +20,16 @@ public class ItemDTO {
     public ItemDTO() {
     }
 
+    public ItemDTO(String title, String description, String pictureUrl, String categoryId, Integer quantity, String currencyId, BigDecimal unitPrice) {
+        this.title = title;
+        this.description = description;
+        this.pictureUrl = pictureUrl;
+        this.categoryId = categoryId;
+        this.quantity = quantity;
+        this.currencyId = currencyId;
+        this.unitPrice = unitPrice;
+    }
+
     public String getTitle() {
         return title;
     }

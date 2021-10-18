@@ -1,0 +1,6 @@
+{
+  "message": "The preference with identifier 1 was not found",
+  "error": "not_found",
+  "status": 404,
+  "cause": null
+}

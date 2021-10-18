@@ -4,7 +4,7 @@ import com.mercadopago.exceptions.MPException;
 import com.mercadopago.resources.Preference;
 import org.apache.commons.lang3.StringUtils;
 import org.example.learnspark.exception.DataNotFoundException;
-import org.example.learnspark.exception.ErrorCreatePaymentException;
+import org.example.learnspark.exception.ErrorCreatePreferenceException;
 import org.example.learnspark.model.mapper.PreferenceMapper;
 import org.example.learnspark.model.preference.CreatePreferenceDTO;
 
@@ -19,7 +19,7 @@ public class PreferenceService {
         try {
             createdPreference = preference.save();
             if(createdPreference.getSandboxInitPoint() == null)
-                throw new ErrorCreatePaymentException(createdPreference.getLastApiResponse().getStringResponse(), createPreferenceDTO);
+                throw new ErrorCreatePreferenceException(createdPreference.getLastApiResponse().getStringResponse(), createPreferenceDTO);
         } catch (MPException e) {
             e.printStackTrace();
         }
@@ -38,7 +38,7 @@ public class PreferenceService {
             e.printStackTrace();
         }
 
-        if(preference == null || preference.getId() == null)
+        if(preference != null && preference.getId() == null)
             throw new DataNotFoundException(preference.getLastApiResponse().getStringResponse(), id);
 
         return preference;

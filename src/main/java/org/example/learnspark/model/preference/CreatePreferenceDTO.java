@@ -8,8 +8,6 @@ public class CreatePreferenceDTO {
 
     private Boolean binaryMode = false;
 
-    private String dateCreated;
-
     private String expirationDateFrom;
 
     private String dateOfExpiration;
@@ -24,7 +22,10 @@ public class CreatePreferenceDTO {
 
     private PayerDTO payer;
 
-    public CreatePreferenceDTO() {
+    public CreatePreferenceDTO() { }
+
+    public CreatePreferenceDTO(Collection<ItemDTO> items) {
+        this.items = items;
     }
 
     public Boolean getBinaryMode() {
@@ -33,14 +34,6 @@ public class CreatePreferenceDTO {
 
     public void setBinaryMode(Boolean binaryMode) {
         this.binaryMode = binaryMode;
-    }
-
-    public String getDateCreated() {
-        return dateCreated;
-    }
-
-    public void setDateCreated(String dateCreated) {
-        this.dateCreated = dateCreated;
     }
 
     public String getExpirationDateFrom() {

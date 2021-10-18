@@ -91,7 +91,7 @@ class PaymentServiceTest extends BaseMPTest {
 
     def "should throw DataNotFoundException if not found payment"() {
         given:
-            dummyHttpClient.mock(404, "get_payment_by_id_mock_mp_response.json")
+            dummyHttpClient.mock(404, "get_payment_by_id_error_mock_mp_response.json")
         when:
             Payment payment = PaymentService.getPaymentById(paymentId)
         then:
