@@ -28,4 +28,8 @@ public class IdentificationService {
         return identificationTypeCache.stream().filter(i -> i.getId().equalsIgnoreCase(id))
                 .collect(Collectors.toList());
     }
+
+    public static void clearCache() {
+        identificationTypeCache.clear();
+    }
 }
