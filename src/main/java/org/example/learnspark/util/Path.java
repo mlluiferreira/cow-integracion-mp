@@ -36,11 +36,15 @@ public class Path {
         private static final String PUBLIC_KEY = "PUBLIC_KEY";
 
         public static String getEnvAccessToken() {
-            return System.getenv(ENV_ACCESS_TOKEN);
+            String env = System.getenv(ENV_ACCESS_TOKEN);
+            if(env == null) throw new NullPointerException(String.format("Varialbe %s is missing", ENV_ACCESS_TOKEN));
+            return env;
         }
 
         public static String getPublicKey() {
-            return System.getenv(PUBLIC_KEY);
+            String key = System.getenv(PUBLIC_KEY);
+            if(key == null) throw new NullPointerException(String.format("Varialbe %s is missing", PUBLIC_KEY));
+            return key;
         }
     }
 }
