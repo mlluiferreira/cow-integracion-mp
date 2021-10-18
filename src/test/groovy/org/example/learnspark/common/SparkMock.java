@@ -20,6 +20,13 @@ public class SparkMock {
         return request;
     }
 
+    public static Request mockRequestWithMethodAndPathInfo(String method, String pathInfo) {
+        Request request = Mockito.mock(Request.class);
+        Mockito.when(request.pathInfo()).thenReturn(pathInfo);
+        Mockito.when(request.requestMethod()).thenReturn(method);
+        return request;
+    }
+
     public static Request mockParam(String key, String value) {
         Request request = Mockito.mock(Request.class);
         Mockito.when(request.params(key)).thenReturn(value);
@@ -33,6 +40,15 @@ public class SparkMock {
     }
 
     public static Response mockResponse() {
-        return Mockito.mock(Response.class);
+        Response response = Mockito.mock(Response.class);
+        Mockito.doNothing().when(response).body(Mockito.any());
+        Mockito.doNothing().when(response).status(Mockito.anyInt());
+        return response;
+    }
+
+    public static Response mockResponseWithException(Class<Exception> exception) {
+        Response response = Mockito.mock(Response.class);
+        Mockito.doThrow(exception).when(response).body(Mockito.any());
+        return response;
     }
 }
