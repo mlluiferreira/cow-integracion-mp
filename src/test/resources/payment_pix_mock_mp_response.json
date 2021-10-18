@@ -6,7 +6,7 @@
     "id": "1",
     "email": "dummy@dummy.com",
     "identification": {
-      "type": "cpf",
+      "type": "CPF",
       "number": "00000000000"
     },
     "phone": {}
@@ -20,24 +20,32 @@
   "transaction_amount_refunded": 0.0,
   "coupon_amount": 0.0,
   "transaction_details": {
-    "financial_institution": "",
     "net_received_amount": 0.0,
     "total_paid_amount": 10.0,
     "installment_amount": 0.0,
-    "overpaid_amount": 0.0,
-    "external_resource_url": "https://www.mercadopago.com/mlb/payments/sandbox/ticket/helper?payment_id=1242461237&payment_method_reference_id=6002123914&caller_id=10&hash=02f73cba-0990-4ba6-b6c0-2977f5144d4e",
-    "payment_method_reference_id": "6002123914"
+    "overpaid_amount": 0.0
   },
   "fee_details": [],
   "status": "pending",
-  "status_detail": "pending_waiting_payment",
+  "status_detail": "pending_waiting_transfer",
   "captured": true,
-  "payment_method_id": "bolbradesco",
-  "payment_type_id": "ticket",
+  "payment_method_id": "pix",
+  "payment_type_id": "bank_transfer",
   "card": {},
   "installments": 1,
   "refunds": [],
   "additional_info": {},
   "processing_mode": "aggregator",
-  "point_of_interaction": {}
+  "point_of_interaction": {
+    "type": "OPENPLATFORM",
+    "application_data": {},
+    "transaction_data": {
+      "qr_code": "",
+      "qr_code_base64": "",
+      "bank_info": {
+        "payer": {},
+        "collector": {}
+      }
+    }
+  }
 }

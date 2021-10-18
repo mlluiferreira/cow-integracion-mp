@@ -26,6 +26,12 @@ public class SparkMock {
         return request;
     }
 
+    public static Response mockResponseRedirect() {
+        Response response = Mockito.mock(Response.class);
+        Mockito.doNothing().when(response).redirect(Mockito.any());
+        return response;
+    }
+
     public static Response mockResponse() {
         return Mockito.mock(Response.class);
     }

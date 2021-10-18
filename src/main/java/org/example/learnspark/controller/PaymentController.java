@@ -25,7 +25,7 @@ public class PaymentController {
         String id = request.params("id");
         Payment payment = PaymentService.getPaymentById(id);
 
-        if(payment.getPaymentMethodId().equalsIgnoreCase("ticket")) {
+        if(payment.getPaymentTypeId().name().equalsIgnoreCase("ticket")) {
             response.redirect(payment.getTransactionDetails().getExternalResourceUrl());
         } else if(payment.getPaymentMethodId().equalsIgnoreCase("pix")) {
             return payment.getPointOfInteraction().getTransactionData().getQrCodeBase64();
