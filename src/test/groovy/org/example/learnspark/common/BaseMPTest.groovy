@@ -5,6 +5,7 @@ import com.mercadopago.resources.IdentificationType
 import com.mercadopago.resources.Payment
 import com.mercadopago.resources.PaymentMethod
 import com.mercadopago.resources.Preference
+import org.example.learnspark.util.MPSdk
 import spock.lang.Specification
 
 class BaseMPTest extends Specification {
@@ -14,13 +15,6 @@ class BaseMPTest extends Specification {
 
     def setup() {
         dummyHttpClient = new DummyHttpClient()
-        MercadoPago.SDK.cleanConfiguration()
-        MercadoPago.SDK.setAccessToken(accessToken)
-        MercadoPago.SDK.setHttpClient(dummyHttpClient)
-
-        new PaymentMethod();
-        new IdentificationType();
-        new Payment();
-        new Preference();
+        MPSdk.setup(dummyHttpClient, accessToken);
     }
 }
