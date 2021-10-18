@@ -1,0 +1,12 @@
+{
+  "message": "payer.email must be a valid email",
+  "error": "bad_request",
+  "status": 400,
+  "cause": [
+    {
+      "code": 4050,
+      "description": "payer.email must be a valid email",
+      "data": "18-10-2021T14:19:42UTC;e61dc872-c19a-4453-a61b-49e433a930b6"
+    }
+  ]
+}

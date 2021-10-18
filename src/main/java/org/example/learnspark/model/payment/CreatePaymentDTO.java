@@ -16,6 +16,13 @@ public class CreatePaymentDTO {
     public CreatePaymentDTO() {
     }
 
+    public CreatePaymentDTO(BigDecimal amount, String description, String paymentMethodId, PayerDTO payer) {
+        this.amount = amount;
+        this.description = description;
+        this.paymentMethodId = paymentMethodId;
+        this.payer = payer;
+    }
+
     public BigDecimal getAmount() {
         return amount;
     }

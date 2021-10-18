@@ -14,6 +14,14 @@ public class PayerDTO {
     public PayerDTO() {
     }
 
+    public PayerDTO(String email, String firstName, String lastName, String cpf, AddressDTO address) {
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.cpf = cpf;
+        this.address = address;
+    }
+
     public String getEmail() {
         return email;
     }

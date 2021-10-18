@@ -17,6 +17,15 @@ public class AddressDTO {
     public AddressDTO() {
     }
 
+    public AddressDTO(String zipCode, String streetName, Integer streetNumber, String neighborhood, String city, String state) {
+        this.zipCode = zipCode;
+        this.streetName = streetName;
+        this.streetNumber = streetNumber;
+        this.neighborhood = neighborhood;
+        this.city = city;
+        this.state = state;
+    }
+
     public String getZipCode() {
         return zipCode;
     }

@@ -14,6 +14,7 @@ public class PaymentService {
     public static Payment createPayment(CreatePaymentDTO createPaymentDTO) {
         Payment payment = PaymentMapper.INSTANCE.CreatePaymentDTOToPayment(createPaymentDTO);
         Payment createdPayment = null;
+
         try {
             createdPayment = payment.save();
             if(createdPayment.getStatus() == null) {
@@ -22,6 +23,7 @@ public class PaymentService {
         } catch (MPException e) {
             e.printStackTrace();
         }
+
         return createdPayment;
     }
 
@@ -35,8 +37,10 @@ public class PaymentService {
         } catch (MPException e) {
             e.printStackTrace();
         }
-        if(payment == null || payment.getId() == null)
+
+        if(payment != null && payment.getId() == null)
             throw new DataNotFoundException(payment.getLastApiResponse().getStringResponse(), id);
+
         return payment;
     }
 }
