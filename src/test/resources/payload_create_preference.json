@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "title": "Dummy Title",
+      "description": "Dummy description",
+      "picture_url": "http://www.myapp.com/myimage.jpg",
+      "category_id": "cat123",
+      "quantity": 1,
+      "currency_id": "BRL",
+      "unit_price": 10
+    }
+  ]
+}

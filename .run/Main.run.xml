@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <envs>
+      <env name="ENV_ACCESS_TOKEN" value="TEST-4063311241078919-090113-fdc5627320dd29250537e360de50518d-805378889" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="org.example.learnspark.Main" />
+    <module name="learnspark.main" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.example.learnspark.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
