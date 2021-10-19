@@ -98,8 +98,8 @@ class PreferenceServiceTest extends BaseMPTest {
     }
 
     static def CreatePreferenceDTO createPreference() {
-        return new CreatePreferenceDTO(List.of(
-                new ItemDTO("dummy", "dummy", "", "", 1, "BRL", 10.0)
-        ));
+        List<ItemDTO> items = new ArrayList<>();
+        items.add(new ItemDTO("dummy", "dummy", "", "", 1, "BRL", 10.0));
+        return new CreatePreferenceDTO(items);
     }
 }
